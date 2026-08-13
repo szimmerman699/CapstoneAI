@@ -20,6 +20,12 @@ capstone-ai = "capstone_ai:main"
 
 
 
+[project.optional-dependencies]
+server = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    # whatever your server actually needs
+]
 [build-system]
 requires = ["uv_build>=0.12.3,<0.13.0"]
 build-backend = "uv_build"
