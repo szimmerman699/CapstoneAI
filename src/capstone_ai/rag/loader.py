@@ -140,7 +140,14 @@ class DocumentLoader:
         offsets = []
         cursor = 0
         separator = "\n\n"
-        with pymupdf.open(path) as doc:
+        try:
+            handle = pymupdf.open(path)
+        except pymupdf.FileDataError as exc:
+            # Surface our own ValueError instead of leaking a pymupdf-specific exception
+            # type callers would need to know to catch separately from every other
+            # loader failure.
+            raise ValueError(f"{path.name} is empty or not a valid PDF") from exc
+        with handle as doc:
             pdf_title = (doc.metadata or {}).get("title") or None
             for page in doc:
                 text = page.get_text()
