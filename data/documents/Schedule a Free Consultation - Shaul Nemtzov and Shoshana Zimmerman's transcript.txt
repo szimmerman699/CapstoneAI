@@ -1,0 +1,908 @@
+WEBVTT
+
+00:00:24.000 --> 00:00:28.000
+Shaul Nemtzov: Yes, hi, how are you? Um…
+
+00:00:26.000 --> 00:00:28.000
+Shoshana Zimmerman: Hi.
+
+00:00:28.000 --> 00:00:30.000
+Shaul Nemtzov: Okay.
+
+00:00:30.000 --> 00:00:33.000
+Shaul Nemtzov: That's that one.
+
+00:00:33.000 --> 00:00:36.000
+Shaul Nemtzov: Just anterior.
+
+00:00:36.000 --> 00:00:39.000
+Shaul Nemtzov: Connect… here.
+
+00:00:37.000 --> 00:00:40.000
+Shoshana Zimmerman: Oh, that doesn't work, this headphones.
+
+00:00:39.000 --> 00:00:43.000
+Shaul Nemtzov: Sorry, one second.
+
+00:00:41.000 --> 00:00:44.000
+Shoshana Zimmerman: It doesn't… oh, here. Second.
+
+00:00:43.000 --> 00:00:46.000
+Shaul Nemtzov: Enjoy yourself.
+
+00:00:45.000 --> 00:00:47.000
+Shoshana Zimmerman: Yeah, hi.
+
+00:00:48.000 --> 00:00:52.000
+Shaul Nemtzov: Second, um, I want to show you…
+
+00:00:52.000 --> 00:00:55.000
+Shaul Nemtzov: A little bit of what I am thinking of.
+
+00:00:56.000 --> 00:01:01.000
+Shaul Nemtzov: Um, okay, so just to be clear, so you basically, um… here, one second, sorry, I'm just gonna go on my…
+
+00:01:01.000 --> 00:01:03.000
+Shaul Nemtzov: Laptop as well.
+
+00:01:03.000 --> 00:01:09.000
+Shaul Nemtzov: Um, so basically you do, um, development, correct? Correct?
+
+00:01:09.000 --> 00:01:11.000
+Shoshana Zimmerman: Mm-hmm. Yeah.
+
+00:01:10.000 --> 00:01:12.000
+Shaul Nemtzov: Okay, so…
+
+00:01:13.000 --> 00:01:16.000
+Shaul Nemtzov: Yeah, so basically, what I have here is…
+
+00:01:17.000 --> 00:01:22.000
+Shaul Nemtzov: My question for you is that I have this project, I'm trying to see if I can go on here as well.
+
+00:01:22.000 --> 00:01:24.000
+Shaul Nemtzov: One second…
+
+00:01:28.000 --> 00:01:30.000
+Shaul Nemtzov: Let me just go on…
+
+00:01:30.000 --> 00:01:32.000
+Shaul Nemtzov: Computer…
+
+00:01:39.000 --> 00:01:43.000
+Shaul Nemtzov: Okay, let me join here.
+
+00:01:44.000 --> 00:01:46.000
+Shaul Nemtzov: Um, basically, I have this, um…
+
+00:01:47.000 --> 00:01:49.000
+Shaul Nemtzov: It's, like, um, a dashboard.
+
+00:01:49.000 --> 00:01:52.000
+Shaul Nemtzov: One second, where's going?
+
+00:01:54.000 --> 00:01:57.000
+Shaul Nemtzov: Okay, let me… let me go off your phone.
+
+00:02:08.000 --> 00:02:10.000
+Shoshana Zimmerman: I think you're on… okay, no.
+
+00:02:09.000 --> 00:02:15.000
+Shaul Nemtzov: Okay, sorry about that, okay, now I'm here. Um, there was a lot of, like, back and forth with the phone. Okay, so basically, um…
+
+00:02:16.000 --> 00:02:21.000
+Shaul Nemtzov: What I'm trying to do is… I have, like, um, a dashboard that I… that the client needs.
+
+00:02:19.000 --> 00:02:21.000
+Shoshana Zimmerman: Mm-hmm.
+
+00:02:22.000 --> 00:02:26.000
+Shaul Nemtzov: Um, it's… for now, it's pulling from, let's say, um…
+
+00:02:26.000 --> 00:02:34.000
+Shaul Nemtzov: Stripe, or whatever, or some other payment processor. I'll show it to you, I'll show you the basic design of it, just so you get an idea of what I'm talking about.
+
+00:02:28.000 --> 00:02:30.000
+Shoshana Zimmerman: Hmm.
+
+00:02:34.000 --> 00:02:39.000
+Shoshana Zimmerman: Is this a, like, an existing project, or a potential project?
+
+00:02:39.000 --> 00:02:41.000
+Shaul Nemtzov: No, it's, it's, um…
+
+00:02:41.000 --> 00:02:44.000
+Shaul Nemtzov: It is a…
+
+00:02:45.000 --> 00:02:50.000
+Shaul Nemtzov: Well, the design… I'm doing the design. The design is already done.
+
+00:02:48.000 --> 00:02:50.000
+Shoshana Zimmerman: Okay, he hired you for the design.
+
+00:02:51.000 --> 00:02:58.000
+Shaul Nemtzov: Yeah, the only question is if I would take on this. He has developers for the mobile app, and the question is if I would.
+
+00:02:52.000 --> 00:02:54.000
+Shoshana Zimmerman: Okay.
+
+00:02:57.000 --> 00:02:59.000
+Shoshana Zimmerman: Okay.
+
+00:02:59.000 --> 00:03:01.000
+Shaul Nemtzov: If I would take this on…
+
+00:03:02.000 --> 00:03:04.000
+Shaul Nemtzov: Because I would want it for him.
+
+00:03:05.000 --> 00:03:07.000
+Shaul Nemtzov: To the website.
+
+00:03:07.000 --> 00:03:10.000
+Shaul Nemtzov: Develop a framer, let's say.
+
+00:03:10.000 --> 00:03:12.000
+Shoshana Zimmerman: Okay.
+
+00:03:10.000 --> 00:03:12.000
+Shaul Nemtzov: And then…
+
+00:03:12.000 --> 00:03:17.000
+Shaul Nemtzov: Then have the dashboard have them be able to sign in.
+
+00:03:17.000 --> 00:03:19.000
+Shoshana Zimmerman: Okay.
+
+00:03:17.000 --> 00:03:22.000
+Shaul Nemtzov: And I would use… I would probably still use Framer. I'm wondering if we… Framer has a lot of custom… custom code.
+
+00:03:22.000 --> 00:03:24.000
+Shoshana Zimmerman: Okay.
+
+00:03:22.000 --> 00:03:25.000
+Shaul Nemtzov: options there. Are you familiar with that in particular, or not?
+
+00:03:24.000 --> 00:03:26.000
+Shoshana Zimmerman: A little bit.
+
+00:03:34.000 --> 00:03:40.000
+Shaul Nemtzov: If… if I could, so to speak, you know, develop it in Framer.
+
+00:03:40.000 --> 00:03:42.000
+Shoshana Zimmerman: Mm-hmm.
+
+00:03:41.000 --> 00:03:43.000
+Shaul Nemtzov: Um, one second…
+
+00:03:44.000 --> 00:03:46.000
+Shaul Nemtzov: And then, um…
+
+00:03:46.000 --> 00:03:51.000
+Shaul Nemtzov: Yeah, and basically be able to give him a full… a full, um…
+
+00:03:53.000 --> 00:03:55.000
+Shoshana Zimmerman: I don't understand, um…
+
+00:03:54.000 --> 00:03:55.000
+Shaul Nemtzov: Yeah.
+
+00:03:55.000 --> 00:04:00.000
+Shoshana Zimmerman: So you want to develop it, and it got a little choppy before, so can you say that again?
+
+00:03:59.000 --> 00:04:03.000
+Shaul Nemtzov: Okay, sorry. So, so it's… it's designed in Figma.
+
+00:04:03.000 --> 00:04:05.000
+Shoshana Zimmerman: Okay.
+
+00:04:04.000 --> 00:04:09.000
+Shaul Nemtzov: Developers would probably create their own website, like, from scratch, so to speak.
+
+00:04:10.000 --> 00:04:13.000
+Shaul Nemtzov: And create a dashboard.
+
+00:04:13.000 --> 00:04:15.000
+Shaul Nemtzov: you know, pulling from Stripe, or whatever.
+
+00:04:15.000 --> 00:04:17.000
+Shoshana Zimmerman: Okay.
+
+00:04:16.000 --> 00:04:22.000
+Shaul Nemtzov: But my question is… this is going a little slow… my question is, um…
+
+00:04:24.000 --> 00:04:28.000
+Shaul Nemtzov: Maybe, maybe I can take the design…
+
+00:04:28.000 --> 00:04:30.000
+Shaul Nemtzov: build it out in Framer.
+
+00:04:30.000 --> 00:04:33.000
+Shaul Nemtzov: And then just with some…
+
+00:04:33.000 --> 00:04:35.000
+Shaul Nemtzov: Custom code, or whatever.
+
+00:04:35.000 --> 00:04:41.000
+Shaul Nemtzov: and some APIs, integrations, whatever, bring it, connect… connect it, so that it's actually…
+
+00:04:42.000 --> 00:04:45.000
+Shaul Nemtzov: So they can sign in with, you know, authorization.
+
+00:04:45.000 --> 00:04:47.000
+Shoshana Zimmerman: Okay.
+
+00:04:45.000 --> 00:04:49.000
+Shaul Nemtzov: Each user can sign in and see their own dashboard.
+
+00:04:50.000 --> 00:04:52.000
+Shaul Nemtzov: Um, that's the idea.
+
+00:04:50.000 --> 00:04:52.000
+Shoshana Zimmerman: Mm-hmm.
+
+00:04:53.000 --> 00:05:01.000
+Shoshana Zimmerman: Okay. Um, so you want to know if you can develop it rather, like, yourself, like, in-house, rather than having it…
+
+00:05:01.000 --> 00:05:03.000
+Shoshana Zimmerman: So, whoever developers that he has.
+
+00:05:03.000 --> 00:05:06.000
+Shaul Nemtzov: Yeah. Yeah. Yeah.
+
+00:05:07.000 --> 00:05:11.000
+Shaul Nemtzov: And what would it take, if it's possible, what would it take to do something like that?
+
+00:05:08.000 --> 00:05:10.000
+Shoshana Zimmerman: Uh… right.
+
+00:05:11.000 --> 00:05:13.000
+Shoshana Zimmerman: So let's say you would…
+
+00:05:12.000 --> 00:05:13.000
+Shaul Nemtzov: using Framer.
+
+00:05:13.000 --> 00:05:16.000
+Shoshana Zimmerman: Why would you do it in frame or not, like, WordPress?
+
+00:05:14.000 --> 00:05:17.000
+Shaul Nemtzov: Doesn't have to be… doesn't have to be framer.
+
+00:05:17.000 --> 00:05:20.000
+Shaul Nemtzov: Um, because…
+
+00:05:20.000 --> 00:05:27.000
+Shaul Nemtzov: Um… I wanted… I want to design and develop the website in Framework, because there's so much…
+
+00:05:27.000 --> 00:05:33.000
+Shaul Nemtzov: Um, first of all, it's easy for me to use, and there's so much customization.
+
+00:05:31.000 --> 00:05:33.000
+Shoshana Zimmerman: Okay.
+
+00:05:33.000 --> 00:05:38.000
+Shaul Nemtzov: And it just works really well for these types of things.
+
+00:05:36.000 --> 00:05:38.000
+Shoshana Zimmerman: Uh-huh.
+
+00:05:38.000 --> 00:05:42.000
+Shaul Nemtzov: Um, there's low maintenance, it's, um…
+
+00:05:42.000 --> 00:05:45.000
+Shaul Nemtzov: It's fast in a lot of ways, it's easy to customize, it's…
+
+00:05:44.000 --> 00:05:46.000
+Shoshana Zimmerman: Mm-hmm.
+
+00:05:45.000 --> 00:05:51.000
+Shaul Nemtzov: Um… and the only… and it does have, like, plugins that you could…
+
+00:05:52.000 --> 00:05:54.000
+Shaul Nemtzov: Could, you know…
+
+00:05:54.000 --> 00:06:01.000
+Shaul Nemtzov: create, you know, um, accounts and logins and authorization. Only question is, it'd take a very long time to load here, because…
+
+00:05:57.000 --> 00:05:59.000
+Shoshana Zimmerman: Okay.
+
+00:06:02.000 --> 00:06:05.000
+Shaul Nemtzov: Five more minutes.
+
+00:06:05.000 --> 00:06:08.000
+Shaul Nemtzov: Um, so the question is…
+
+00:06:09.000 --> 00:06:12.000
+Shaul Nemtzov: Is that something… is that something that's possible?
+
+00:06:13.000 --> 00:06:18.000
+Shoshana Zimmerman: I mean, um, you're… I'm relying on you that you're saying that it can have, like.
+
+00:06:18.000 --> 00:06:22.000
+Shoshana Zimmerman: Logins and stuff like that in the framer, right?
+
+00:06:23.000 --> 00:06:27.000
+Shaul Nemtzov: It could, no, that I know it could. That I know it could. It does, it does, yeah.
+
+00:06:24.000 --> 00:06:30.000
+Shoshana Zimmerman: Okay, so which part would you… you would build in the dashboard, you would… what would you need me for?
+
+00:06:32.000 --> 00:06:37.000
+Shaul Nemtzov: I guess doing some of the connecting, like, connecting things and stuff like that.
+
+00:06:37.000 --> 00:06:39.000
+Shoshana Zimmerman: the APIs, like, between…
+
+00:06:38.000 --> 00:06:44.000
+Shaul Nemtzov: Like, yeah, yeah, between… between Framer…
+
+00:06:44.000 --> 00:06:46.000
+Shaul Nemtzov: Um…
+
+00:06:48.000 --> 00:06:55.000
+Shaul Nemtzov: Yeah, and, like, it should up… it should, it should, it should reload and, like, whatever, like, dynamically, like, it should be up to date, like…
+
+00:06:56.000 --> 00:07:00.000
+Shaul Nemtzov: Like, the same way I would go into Stripe, it would be up-to-date, you know?
+
+00:07:01.000 --> 00:07:03.000
+Shoshana Zimmerman: Mm-hmm.
+
+00:07:03.000 --> 00:07:06.000
+Shoshana Zimmerman: Ah, so you would want it, like…
+
+00:07:04.000 --> 00:07:06.000
+Shaul Nemtzov: Try to see if this can…
+
+00:07:06.000 --> 00:07:11.000
+Shoshana Zimmerman: pull the… it's like pulling the payments and stuff from Stripe, from the dashboard.
+
+00:07:09.000 --> 00:07:11.000
+Shaul Nemtzov: That's not big.
+
+00:07:12.000 --> 00:07:15.000
+Shaul Nemtzov: Exactly. Exactly.
+
+00:07:13.000 --> 00:07:15.000
+Shoshana Zimmerman: Ah.
+
+00:07:16.000 --> 00:07:23.000
+Shaul Nemtzov: Taking a very long time to load. I'm not sure why the internet is not amazing here. Sorry about that.
+
+00:07:23.000 --> 00:07:30.000
+Shaul Nemtzov: And the file is tremendous. So it takes a very long time to write. Um, but that's…
+
+00:07:25.000 --> 00:07:27.000
+Shoshana Zimmerman: No.
+
+00:07:30.000 --> 00:07:32.000
+Shaul Nemtzov: the idea…
+
+00:07:33.000 --> 00:07:38.000
+Shaul Nemtzov: That's it, it's a basic… yeah, it's just a basic… not responsive.
+
+00:07:39.000 --> 00:07:42.000
+Shaul Nemtzov: Let me try this. Let me try a different file.
+
+00:07:43.000 --> 00:07:46.000
+Shaul Nemtzov: Um, let me try to… here, let me try this one.
+
+00:07:50.000 --> 00:07:52.000
+Shaul Nemtzov: Um…
+
+00:07:55.000 --> 00:07:59.000
+Shaul Nemtzov: Sorry for the technical… oh, there went. Okay, great.
+
+00:08:00.000 --> 00:08:03.000
+Shaul Nemtzov: Um, so I'm going to open this…
+
+00:08:03.000 --> 00:08:08.000
+Shaul Nemtzov: page… I'll share my screen with you so you get an idea of what I'm talking about. Does that make sense?
+
+00:08:08.000 --> 00:08:10.000
+Shoshana Zimmerman: Mm-hmm.
+
+00:08:09.000 --> 00:08:11.000
+Shaul Nemtzov: Okay, amazing.
+
+00:08:11.000 --> 00:08:18.000
+Shaul Nemtzov: So… here is… oh, I'm sending a request to be able to share my screen.
+
+00:08:16.000 --> 00:08:18.000
+Shoshana Zimmerman: Oh, okay.
+
+00:08:18.000 --> 00:08:23.000
+Shaul Nemtzov: Okay, so now you see my… you see my screen? Oh, okay, let me share my screen.
+
+00:08:23.000 --> 00:08:27.000
+Shaul Nemtzov: Okay, I'm sharing this screen with you.
+
+00:08:28.000 --> 00:08:29.000
+Shoshana Zimmerman: Okay.
+
+00:08:28.000 --> 00:08:34.000
+Shaul Nemtzov: Okay, so essentially, this is basically the heart of it. There's… there is a couple of…
+
+00:08:33.000 --> 00:08:35.000
+Shoshana Zimmerman: Okay.
+
+00:08:34.000 --> 00:08:36.000
+Shaul Nemtzov: There is a couple of things going on here.
+
+00:08:36.000 --> 00:08:40.000
+Shaul Nemtzov: But basically, this is all just totals.
+
+00:08:40.000 --> 00:08:45.000
+Shaul Nemtzov: Um… this is just basically totals, right? Total donations…
+
+00:08:43.000 --> 00:08:45.000
+Shoshana Zimmerman: Okay.
+
+00:08:45.000 --> 00:08:48.000
+Shaul Nemtzov: It's a push-cut app, so whatever…
+
+00:08:48.000 --> 00:08:49.000
+Shoshana Zimmerman: Okay.
+
+00:08:50.000 --> 00:08:52.000
+Shaul Nemtzov: Um…
+
+00:08:52.000 --> 00:08:58.000
+Shaul Nemtzov: There is some development here, actually. So you might need, let's say, collaborate with the developers in terms of, like.
+
+00:08:59.000 --> 00:09:08.000
+Shaul Nemtzov: Because there's gonna be, like, a backend, a database, whatever. And so, like, you could probably pull from Stripe yourself, let's say, the total donations.
+
+00:09:02.000 --> 00:09:04.000
+Shoshana Zimmerman: Uh-huh.
+
+00:09:08.000 --> 00:09:11.000
+Shaul Nemtzov: But you probably wouldn't be able to know how much.
+
+00:09:12.000 --> 00:09:15.000
+Shaul Nemtzov: how much I put into a pushker, because the pushcart only empties at the end of the month.
+
+00:09:15.000 --> 00:09:17.000
+Shoshana Zimmerman: Hmm.
+
+00:09:15.000 --> 00:09:18.000
+Shaul Nemtzov: So that's only, like, internal…
+
+00:09:18.000 --> 00:09:22.000
+Shaul Nemtzov: recorded internally. So, I guess it's…
+
+00:09:20.000 --> 00:09:22.000
+Shoshana Zimmerman: Mm-hmm.
+
+00:09:22.000 --> 00:09:25.000
+Shaul Nemtzov: connecting with Stripe, but also connecting to their database.
+
+00:09:25.000 --> 00:09:29.000
+Shaul Nemtzov: Wherever that's… however that's made. Um…
+
+00:09:25.000 --> 00:09:27.000
+Shoshana Zimmerman: Mm-hmm.
+
+00:09:30.000 --> 00:09:32.000
+Shaul Nemtzov: That's… and then how many people… how many people…
+
+00:09:33.000 --> 00:09:37.000
+Shaul Nemtzov: have their organization as a favorite, that's also something internal that you have to pull from.
+
+00:09:37.000 --> 00:09:40.000
+Shaul Nemtzov: But names and emails, I'm assuming you could get from Stripe.
+
+00:09:40.000 --> 00:09:42.000
+Shoshana Zimmerman: Mm-hmm.
+
+00:09:40.000 --> 00:09:43.000
+Shaul Nemtzov: Um, and then there's… there's some filtering and stuff like that.
+
+00:09:45.000 --> 00:09:50.000
+Shaul Nemtzov: Um, and there is a couple of things here. Like, there is… you can add, you know, sub-organizations.
+
+00:09:50.000 --> 00:09:52.000
+Shoshana Zimmerman: Mm-hmm.
+
+00:09:52.000 --> 00:09:58.000
+Shaul Nemtzov: Um, and then you can update your information here with your organization details.
+
+00:09:56.000 --> 00:09:58.000
+Shoshana Zimmerman: Okay.
+
+00:09:58.000 --> 00:10:00.000
+Shaul Nemtzov: You can add a sub-organization.
+
+00:09:59.000 --> 00:10:02.000
+Shoshana Zimmerman: Where does Framer save all that stuff?
+
+00:10:00.000 --> 00:10:02.000
+Shaul Nemtzov: You can…
+
+00:10:04.000 --> 00:10:10.000
+Shaul Nemtzov: So that's a good question. I don't know, I'm just, like, as I'm going through it, I'm, like, wondering, like, maybe this is too much…
+
+00:10:10.000 --> 00:10:14.000
+Shaul Nemtzov: Or Framer to store, but if Framer could be a…
+
+00:10:14.000 --> 00:10:18.000
+Shaul Nemtzov: More like a front end for this, and just like, um…
+
+00:10:18.000 --> 00:10:25.000
+Shaul Nemtzov: like, if maybe we could use, like, what would you… what would you assume, if it's possible? And this is just basically… these are just links. These just link out to…
+
+00:10:24.000 --> 00:10:26.000
+Shoshana Zimmerman: Uh-huh.
+
+00:10:25.000 --> 00:10:30.000
+Shaul Nemtzov: Wherever, so this is not a big deal. This I could do myself, even. It's not a big deal.
+
+00:10:28.000 --> 00:10:29.000
+Shoshana Zimmerman: Okay.
+
+00:10:30.000 --> 00:10:33.000
+Shaul Nemtzov: Um, but it should be done in a way where.
+
+00:10:35.000 --> 00:10:38.000
+Shaul Nemtzov: Um, it should be done. Yeah, I could probably set it up in a way where it's streamlined.
+
+00:10:38.000 --> 00:10:42.000
+Shaul Nemtzov: I don't know, I'm just… I'm just wondering if this is… if this is… if I'm…
+
+00:10:42.000 --> 00:10:47.000
+Shaul Nemtzov: if I'm stretching it too far, or if it makes sense to do something like this.
+
+00:10:47.000 --> 00:10:54.000
+Shoshana Zimmerman: I feel like WordPress is more, like, built in, um, and they might even have something that pulls from Stripe, I have no idea, like…
+
+00:10:55.000 --> 00:11:00.000
+Shoshana Zimmerman: Um… and, like, it's, you know, it's very easy to make dashboards and stuff like that.
+
+00:11:00.000 --> 00:11:06.000
+Shoshana Zimmerman: Um, and you have a database. With Framer, from what I understand, I'm not sure that it has a database.
+
+00:11:07.000 --> 00:11:12.000
+Shoshana Zimmerman: So it would need to, like, rely on, like, let's say something like Airtable or something and then you would.
+
+00:11:11.000 --> 00:11:13.000
+Shaul Nemtzov: Right.
+
+00:11:12.000 --> 00:11:17.000
+Shoshana Zimmerman: Basically, like, sync it, keep your data there, and, like, use automations to go back and forth.
+
+00:11:18.000 --> 00:11:24.000
+Shoshana Zimmerman: Um, to pull the data, you know, it could be done, um, but it does add more.
+
+00:11:19.000 --> 00:11:20.000
+Shaul Nemtzov: Right.
+
+00:11:22.000 --> 00:11:24.000
+Shaul Nemtzov: Maybe another minute.
+
+00:11:25.000 --> 00:11:27.000
+Shoshana Zimmerman: More complexity.
+
+00:11:27.000 --> 00:11:30.000
+Shaul Nemtzov: Right, I hear you. I hear you.
+
+00:11:30.000 --> 00:11:37.000
+Shaul Nemtzov: Okay, so maybe I'll try to look a little bit more into this, but I think that, um, it's also a conversation that I want to have with you.
+
+00:11:37.000 --> 00:11:40.000
+Shaul Nemtzov: in terms of, like, other projects as well, like, to see.
+
+00:11:40.000 --> 00:11:42.000
+Shoshana Zimmerman: Okay.
+
+00:11:41.000 --> 00:11:43.000
+Shaul Nemtzov: Similar things like this, where it's like…
+
+00:11:43.000 --> 00:11:48.000
+Shaul Nemtzov: where I want to be able to provide more of, like, the full…
+
+00:11:46.000 --> 00:11:48.000
+Shoshana Zimmerman: Uh-huh.
+
+00:11:48.000 --> 00:11:53.000
+Shaul Nemtzov: product, not just the… for a minute. So…
+
+00:11:49.000 --> 00:11:51.000
+Shoshana Zimmerman: Right.
+
+00:11:53.000 --> 00:11:56.000
+Shaul Nemtzov: Um, okay, so…
+
+00:11:56.000 --> 00:11:58.000
+Shaul Nemtzov: Okay, so I guess…
+
+00:11:59.000 --> 00:12:02.000
+Shaul Nemtzov: I don't know. I guess maybe, um…
+
+00:12:03.000 --> 00:12:06.000
+Shaul Nemtzov: Um, I don't want to take up more of your time than we have allotted.
+
+00:12:06.000 --> 00:12:09.000
+Shaul Nemtzov: So, okay, I guess I'll…
+
+00:12:09.000 --> 00:12:12.000
+Shoshana Zimmerman: I have, like… I have, like, another 15 minutes.
+
+00:12:09.000 --> 00:12:11.000
+Shaul Nemtzov: For myself, I'll try to look…
+
+00:12:12.000 --> 00:12:17.000
+Shoshana Zimmerman: I don't know if I wrote as the 15-minute consultation or the 30-minute one.
+
+00:12:17.000 --> 00:12:19.000
+Shoshana Zimmerman: But…
+
+00:12:17.000 --> 00:12:21.000
+Shaul Nemtzov: Oh, I think I only did the 15 minute one.
+
+00:12:20.000 --> 00:12:22.000
+Shoshana Zimmerman: Oh, okay.
+
+00:12:21.000 --> 00:12:23.000
+Shaul Nemtzov: Um…
+
+00:12:24.000 --> 00:12:26.000
+Shoshana Zimmerman: Um…
+
+00:12:27.000 --> 00:12:30.000
+Shoshana Zimmerman: What do you do exactly? You do, like…
+
+00:12:30.000 --> 00:12:32.000
+Shoshana Zimmerman: You do web design?
+
+00:12:34.000 --> 00:12:37.000
+Shaul Nemtzov: Basically, yeah, and app design as well.
+
+00:12:37.000 --> 00:12:39.000
+Shoshana Zimmerman: Okay.
+
+00:12:38.000 --> 00:12:42.000
+Shaul Nemtzov: and web development, but primarily using Framer.
+
+00:12:41.000 --> 00:12:43.000
+Shoshana Zimmerman: More like a framer. Okay.
+
+00:12:42.000 --> 00:12:44.000
+Shaul Nemtzov: Mostly in favor, yeah.
+
+00:12:45.000 --> 00:12:47.000
+Shoshana Zimmerman: And this is more for, like, simple sites.
+
+00:12:47.000 --> 00:12:53.000
+Shoshana Zimmerman: I mean, this one looks like it's pretty built in, like, looks more complicated.
+
+00:12:55.000 --> 00:13:00.000
+Shaul Nemtzov: Right. Most of them are more, like, landing page style.
+
+00:12:59.000 --> 00:13:01.000
+Shoshana Zimmerman: Right. Mm-hmm.
+
+00:13:02.000 --> 00:13:04.000
+Shaul Nemtzov: Um…
+
+00:13:06.000 --> 00:13:13.000
+Shaul Nemtzov: Um… yeah, I guess I also want to see, like, an idea of, like, what you… what you do.
+
+00:13:14.000 --> 00:13:18.000
+Shoshana Zimmerman: Okay, did you see… get my email I sent you today with, like, a couple of websites?
+
+00:13:19.000 --> 00:13:23.000
+Shaul Nemtzov: Um, you know, I did get it, I didn't actually open it up, say…
+
+00:13:22.000 --> 00:13:24.000
+Shoshana Zimmerman: Okay.
+
+00:13:24.000 --> 00:13:26.000
+Shaul Nemtzov: Um…
+
+00:13:26.000 --> 00:13:29.000
+Shaul Nemtzov: Let me open it now.
+
+00:13:34.000 --> 00:13:38.000
+Shaul Nemtzov: So you're saying you work with WordPress and automations?
+
+00:13:37.000 --> 00:13:46.000
+Shoshana Zimmerman: I work a lot with WordPress and custom code, um, so if it's custom code, then I can, you know, that they take, like, JavaScript or something more than that, I can put that in anywhere.
+
+00:13:38.000 --> 00:13:40.000
+Shaul Nemtzov: integrations.
+
+00:13:47.000 --> 00:13:54.000
+Shoshana Zimmerman: So, with Framer, let's say, you know, I would think that with the Framer thing, it would work with the automations, you could.
+
+00:13:54.000 --> 00:13:59.000
+Shoshana Zimmerman: Pulls put stuff from stripe very easily and pull it, put it back.
+
+00:13:55.000 --> 00:13:57.000
+Shaul Nemtzov: Mm-hmm.
+
+00:13:59.000 --> 00:14:05.000
+Shoshana Zimmerman: Um, and put it, pull it from your Airtable, whatever. I think it could be done like that.
+
+00:13:59.000 --> 00:14:01.000
+Shaul Nemtzov: Right.
+
+00:14:05.000 --> 00:14:10.000
+Shoshana Zimmerman: Um, but I help, you know, work with the complex stuff to be able to.
+
+00:14:05.000 --> 00:14:07.000
+Shaul Nemtzov: Mm-hmm.
+
+00:14:10.000 --> 00:14:16.000
+Shoshana Zimmerman: Um, you know, more than the simple, like, you know, landing page brochure type of website.
+
+00:14:18.000 --> 00:14:20.000
+Shaul Nemtzov: Right.
+
+00:14:20.000 --> 00:14:22.000
+Shaul Nemtzov: Um…
+
+00:14:23.000 --> 00:14:25.000
+Shaul Nemtzov: Right.
+
+00:14:25.000 --> 00:14:28.000
+Shoshana Zimmerman: So for this, like, Vartora website, I don't know what you're looking at now.
+
+00:14:28.000 --> 00:14:30.000
+Shaul Nemtzov: Yeah, now I'm looking at it, yeah.
+
+00:14:30.000 --> 00:14:38.000
+Shoshana Zimmerman: Yeah, so, um, you know, I had, like, a lot of, like, different complications that I had to deal with, all these taxonomies and different, like.
+
+00:14:38.000 --> 00:14:42.000
+Shoshana Zimmerman: Things to be able to get the different fields to show, because it's, like, using…
+
+00:14:42.000 --> 00:14:51.000
+Shoshana Zimmerman: These, um, different templates to be able to pull in all the different pamphlets, and you want it to, like, look the same across the board, and, you know.
+
+00:14:51.000 --> 00:14:56.000
+Shoshana Zimmerman: Um, it was like a lot, a lot of, like, stuff that came up that the designer was just like.
+
+00:14:56.000 --> 00:14:59.000
+Shoshana Zimmerman: Totally stuck on. Um…
+
+00:14:58.000 --> 00:15:00.000
+Shaul Nemtzov: Interesting.
+
+00:14:59.000 --> 00:15:01.000
+Shoshana Zimmerman: I just stuck in there.
+
+00:15:01.000 --> 00:15:03.000
+Shoshana Zimmerman: Um… yeah.
+
+00:15:01.000 --> 00:15:03.000
+Shaul Nemtzov: Interesting.
+
+00:15:05.000 --> 00:15:08.000
+Shaul Nemtzov: Um, interesting. Wow, this is great.
+
+00:15:10.000 --> 00:15:14.000
+Shaul Nemtzov: Um… so I guess it's still being developed.
+
+00:15:13.000 --> 00:15:16.000
+Shoshana Zimmerman: Yeah, still being developed, yeah, still finishing up.
+
+00:15:17.000 --> 00:15:21.000
+Shaul Nemtzov: Oh, very nice, and it's variety. I see a lot of varieties here.
+
+00:15:21.000 --> 00:15:24.000
+Shoshana Zimmerman: Yeah. Yeah, it's a variety of sources, yeah.
+
+00:15:24.000 --> 00:15:27.000
+Shaul Nemtzov: Very cool. Okay, so I guess…
+
+00:15:27.000 --> 00:15:29.000
+Shaul Nemtzov: Um…
+
+00:15:32.000 --> 00:15:35.000
+Shaul Nemtzov: Interesting. Okay, very nice. So, I guess, um…
+
+00:15:37.000 --> 00:15:39.000
+Shaul Nemtzov: Um…
+
+00:15:39.000 --> 00:15:41.000
+Shaul Nemtzov: Yeah, I guess we'll… I guess…
+
+00:15:41.000 --> 00:15:43.000
+Shaul Nemtzov: We're connected in…
+
+00:15:43.000 --> 00:15:45.000
+Shaul Nemtzov: Um, have your information in…
+
+00:15:43.000 --> 00:15:45.000
+Shoshana Zimmerman: Creative talent.
+
+00:15:46.000 --> 00:15:48.000
+Shaul Nemtzov: Yeah.
+
+00:15:48.000 --> 00:15:55.000
+Shoshana Zimmerman: Okay. Um, so you're, like, trying to get bigger projects that you could do more… they could offer more of, like, a package and stuff?
+
+00:15:50.000 --> 00:15:52.000
+Shaul Nemtzov: Um…
+
+00:15:57.000 --> 00:15:59.000
+Shaul Nemtzov: Yeah.
+
+00:15:59.000 --> 00:16:08.000
+Shoshana Zimmerman: Okay. So just, like, in terms of how I work, so if I'm doing, like, a big project, then I'll take, like, a price for the whole thing, but…
+
+00:15:59.000 --> 00:16:01.000
+Shaul Nemtzov: Yeah.
+
+00:16:08.000 --> 00:16:13.000
+Shoshana Zimmerman: A lot of times for these smaller things, which is what I kind of imagine that you're doing, like, you know.
+
+00:16:13.000 --> 00:16:16.000
+Shoshana Zimmerman: Bits and pieces here and there.
+
+00:16:16.000 --> 00:16:22.000
+Shoshana Zimmerman: So, I'm not the cheapest developer out there, um, if you want someone cheap, you can go to, like, Upwork, or even, like.
+
+00:16:22.000 --> 00:16:31.000
+Shoshana Zimmerman: you know, there's from developers that are, like, less experienced and stuff, and I have 15 years of experience, so I tend to, like, be able to figure out very complicated stuff and, you know.
+
+00:16:30.000 --> 00:16:32.000
+Shaul Nemtzov: Mm-hmm.
+
+00:16:32.000 --> 00:16:35.000
+Shoshana Zimmerman: Um, be able to do it reasonably quick.
+
+00:16:35.000 --> 00:16:42.000
+Shoshana Zimmerman: Um, and some things obviously take time because, you know, complications arise, which are inevitable.
+
+00:16:42.000 --> 00:16:49.000
+Shoshana Zimmerman: Um, but… so I do it, like, on an hourly thing of $150, so you could, like, bill that into your…
+
+00:16:49.000 --> 00:16:54.000
+Shoshana Zimmerman: Projects, um, you know, so whatever you want to up it, you know?
+
+00:16:49.000 --> 00:16:52.000
+Shaul Nemtzov: Okay. Okay.
+
+00:16:54.000 --> 00:16:57.000
+Shaul Nemtzov: Okay, that's… no, that's good… that's good to know.
+
+00:16:58.000 --> 00:17:01.000
+Shaul Nemtzov: if you're doing good work, I think it makes sense.
+
+00:16:59.000 --> 00:17:07.000
+Shoshana Zimmerman: But I tend to, like, you know, compared to, like, other developers, like, I get things done, like, that they have a much harder time figuring out and stuff.
+
+00:17:07.000 --> 00:17:10.000
+Shoshana Zimmerman: Um… so, yeah.
+
+00:17:07.000 --> 00:17:09.000
+Shaul Nemtzov: Okay, very good.
+
+00:17:09.000 --> 00:17:14.000
+Shaul Nemtzov: I'm just, um, have people waiting for me here, so… um…
+
+00:17:12.000 --> 00:17:14.000
+Shoshana Zimmerman: Okay, yeah.
+
+00:17:15.000 --> 00:17:24.000
+Shoshana Zimmerman: Okay, so let me know, um, what the story is with this. I would, like, if you want me to, like, do research or something, like, you could hire me for, like, an hour or two of that, like…
+
+00:17:16.000 --> 00:17:19.000
+Shaul Nemtzov: Okay. Okay.
+
+00:17:23.000 --> 00:17:26.000
+Shaul Nemtzov: Okay. Okay, that's a good idea.
+
+00:17:25.000 --> 00:17:30.000
+Shoshana Zimmerman: Um… and then we can, like, try to figure out, like, what's the best way to do this, you know?
+
+00:17:27.000 --> 00:17:29.000
+Shaul Nemtzov: Okay.
+
+00:17:29.000 --> 00:17:33.000
+Shaul Nemtzov: Okay, that's a good idea. Okay, so we'll be in touch. Thank you so much.
+
+00:17:30.000 --> 00:17:32.000
+Shoshana Zimmerman: Yeah. Okay.
+
