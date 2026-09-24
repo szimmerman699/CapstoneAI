@@ -6,5 +6,5 @@ class Settings(BaseSettings):
     max_tokens: int = 4096
 
     model_config = {"env_file": ".env", "env_prefix": ""}
-
+    pinecone_api_key: str = ""
 settings = Settings()
