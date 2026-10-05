@@ -64,6 +64,45 @@ def test_zero_overlap_is_allowed(chunker):
     assert [c.text for c in chunks] == ["ab", "cd", "ef"]
 
 
+def test_fixed_default_snapping_avoids_mid_word_splits(chunker):
+    text = "The quick brown fox jumps over the lazy dog near the riverbank at dawn today."
+
+    chunks = chunker.chunk_fixed(text, chunk_size=20, overlap=5)
+
+    for chunk in chunks:
+        start, end = chunk["metadata"]["start_char"], chunk["metadata"]["end_char"]
+        if start > 0:
+            assert not (text[start - 1].isalnum() and chunk.text[0].isalnum()), (
+                f"chunk starts mid-word: ...{text[max(0, start-10):start]}|{chunk.text[:10]}..."
+            )
+        if end < len(text):
+            assert not (chunk.text[-1].isalnum() and text[end].isalnum()), (
+                f"chunk ends mid-word: ...{chunk.text[-10:]}|{text[end:end+10]}..."
+            )
+
+
+def test_fixed_snapping_can_be_disabled_for_raw_offsets(chunker):
+    text = "abcdefghijklmnopqrstuvwxyz " * 3
+
+    snapped = chunker.chunk_fixed(text, chunk_size=10, overlap=2, snap_to_word_boundary=True)
+    raw = chunker.chunk_fixed(text, chunk_size=10, overlap=2, snap_to_word_boundary=False)
+
+    assert [c["metadata"]["end_char"] for c in raw] == [10, 18, 26, 34, 42, 50, 58, 66, 74, 81]
+    assert [c.text for c in snapped] != [c.text for c in raw]
+
+
+def test_fixed_snapping_falls_back_to_raw_offset_with_no_whitespace_in_window(chunker):
+    # A single run of 200 non-space characters has no whitespace within the 40-char
+    # lookback window, so the snap must fall back to the raw cut point rather than
+    # scanning the whole document (or looping forever).
+    text = "x" * 200
+
+    chunks = chunker.chunk_fixed(text, chunk_size=50, overlap=10)
+
+    assert sum(len(c.text) for c in chunks) >= len(text)
+    assert "".join(dict.fromkeys(c.text[0] for c in chunks)) == "x"  # sanity: still valid chunks
+
+
 def test_source_metadata_is_carried_through(chunker):
     chunks = chunker.chunk_fixed(
         "abcdef", chunk_size=3, overlap=0, metadata={"source": "notes.md", "client": "acme"}
@@ -293,10 +332,14 @@ def test_parent_doc_id_and_loader_fields_pass_through_every_strategy(chunker, se
 
 def test_page_number_derived_from_page_offsets(chunker):
     # Simulates loader.Document.metadata for a 3-page PDF.
+    # snap_to_word_boundary=False: this test checks page_number derivation against
+    # exact offsets, not chunk_fixed's word-boundary snapping (covered separately).
     text = "Page one content here. " + "Page two content here. " + "Page three content here."
     doc_metadata = {"page_offsets": [0, 24, 48], "parent_doc_id": "pdf1"}
 
-    chunks = chunker.chunk_fixed(text, chunk_size=24, overlap=0, metadata=doc_metadata)
+    chunks = chunker.chunk_fixed(
+        text, chunk_size=24, overlap=0, metadata=doc_metadata, snap_to_word_boundary=False
+    )
 
     # chunk 0 starts at char 0 -> page 1; chunk 1 starts at char 24 -> page 2; etc.
     assert [c["metadata"]["page_number"] for c in chunks] == [1, 2, 3]

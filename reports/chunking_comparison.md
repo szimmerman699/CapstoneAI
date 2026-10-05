@@ -17,17 +17,24 @@
 
 ## Bad Chunk Boundaries
 
-### Fixed: mid-word split through the exact requirement that matters
+### Fixed: mid-word split through the exact requirement that matters (fixed as of this update — see note)
 
-Fixed-size chunking has no awareness of word or sentence boundaries — it cuts at raw character offset 500, landing inside a word:
+Fixed-size chunking originally had no awareness of word or sentence boundaries — it cut at raw character offset 500 regardless of what was there, landing inside a word:
 
-**Chunk 4 (end):**
+**Chunk 4 (end), before the fix below:**
 > `...tiered/quantity pricing with a 150-unit minim`
 
-**Chunk 5 (start):**
+**Chunk 5 (start), before the fix below:**
 > `ase imprint is 1 color...) → tiered/quantity pricing with a 150-unit minimum (special case: ordering 2 different designs allows 75 units each)...`
 
-The word `minimum` is torn across the boundary (`minim` | `um`). This is cosmetic on its own — the 100-char overlap happens to duplicate the full sentence into chunk 5, so the 150-unit-minimum-with-75-unit-exception detail survives intact *in this instance*. But that's luck, not design: it depends entirely on where the sentence happened to fall relative to the fixed 500-char boundary. A slightly longer preceding sentence would have split the requirement itself across two chunks with no shared context, silently dropping either the minimum or its exception from whichever chunk gets retrieved.
+The word `minimum` was torn across the boundary (`minim` | `um`). This was cosmetic in this specific instance — the 100-char overlap happened to duplicate the full sentence into chunk 5, so the 150-unit-minimum-with-75-unit-exception detail survived intact *by chance*. But that was luck, not design: a slightly longer preceding sentence would have split the requirement itself across two chunks with no shared context, silently dropping either the minimum or its exception from whichever chunk gets retrieved. 21 of the document's chunks were affected this way (13 of 21 had at least one mid-word boundary, measured across the whole corpus before the fix).
+
+**Fixed:** `chunk_fixed` now defaults to `snap_to_word_boundary=True`. Each cut point is nudged to the nearest whitespace within a 40-character lookback window (backward for a chunk's end, forward for the next chunk's start) rather than landing at the raw character offset. Getting this right took two passes:
+
+1. **First attempt** snapped `end` backward but derived the next chunk's `start` purely arithmetically (`end - overlap`), which could land back inside the very word `end` had just snapped past (e.g. `end` snapped past "riverbank ", but `end - overlap` landed inside "riverbank" again). Caught by a real-corpus test, not by the unit tests with short synthetic strings.
+2. **Second bug**, caught while testing the first fix: when the snap search found no whitespace and both `end` and the derived `next_start` collapsed onto the same repeating position, the loop stopped advancing entirely and hung — reproduced with `"abcdefghijklmnopqrstuvwxyz " * 3` at `chunk_size=10`. Fixed by forcing a fallback to the raw (unsnapped) offset whenever the snap would produce a non-advancing or empty chunk, guaranteeing termination.
+
+Re-verified against the full real corpus post-fix: **0 mid-word boundaries across all 5 documents** (previously present in all of them). `snap_to_word_boundary=False` is kept as an explicit opt-out so the raw fixed-offset behavior demonstrated above remains reproducible for comparison purposes.
 
 ### Recursive: heading isolated from its own content
 
@@ -86,15 +93,15 @@ A markdown-aware post-process (merge bare headings forward) closes recursive's m
 
 ## Step 10: Three-way comparison (fixed vs. recursive vs. semantic)
 
-Same document, `data/documents/ad-infinitum-roadmap.md`, run through all three strategies via [`Chunker`](../src/capstone_ai/rag/chunker.py). Recursive numbers below are **post-fix** (§Step 7's bare-heading merge applied). Semantic uses `threshold=0.55`, the corpus-measured default (see `Chunker.similarity_distribution`, documented in the chunker's `DEFAULT_SEMANTIC_THRESHOLD` comment) rather than a borrowed tutorial value.
+Same document, `data/documents/ad-infinitum-roadmap.md`, run through all three strategies via [`Chunker`](../src/capstone_ai/rag/chunker.py) at current defaults. Fixed numbers below are **post-fix** (word-boundary snapping applied, see the note above). Recursive numbers are **post-fix** (§Step 7's bare-heading merge applied). Semantic uses `threshold=0.55`, the corpus-measured default (see `Chunker.similarity_distribution`, documented in the chunker's `DEFAULT_SEMANTIC_THRESHOLD` comment) rather than a borrowed tutorial value.
 
 ### Summary
 
 | Metric | Fixed | Recursive | Semantic |
 |---|---|---|---|
 | Total chunks | 21 | 22 | 13 |
-| Avg chunk size (chars) | 498 | 384 | 649 |
-| Min chunk size (chars) | 450 | 138 | **2** |
+| Avg chunk size (chars) | 494 | 384 | 649 |
+| Min chunk size (chars) | 436 | 138 | **2** |
 | Max chunk size (chars) | 500 | 534 | 2,708 |
 
 Semantic is the outlier on every axis, and for a specific reason: it doesn't control size at all. Fixed and recursive both take a `chunk_size` ceiling as an input; semantic takes a *similarity threshold* and lets chunk size fall out of however many consecutive sentences stay above it. The result is the widest size spread of the three strategies — one chunk of 2,708 chars (a long uninterrupted stretch of related sentences about the business background) sitting next to a 2-char chunk.
@@ -122,10 +129,10 @@ Each of these three list markers was embedded and chunked as if it were a comple
 
 ### Takeaway (all three strategies)
 
-No strategy is safe unmodified against this corpus:
+No strategy was safe unmodified against this corpus. Two of the three failures found are now fixed:
 
-- **Fixed** — mid-word splits, only "saved" by overlap coincidentally reuniting content (§ above).
-- **Recursive** — heading isolation, now fixed via post-merge (Step 7), with one known unfixed variant (`---`-prefixed headings).
-- **Semantic** — numbered-list items misread as standalone sentences, not yet fixed, and arguably the most damaging of the three because the resulting chunk (`"3."`) carries no retrievable signal at all, unlike a mis-split word or an isolated-but-legible heading.
+- **Fixed** — mid-word splits at every raw 500-char boundary. **Fixed** via `snap_to_word_boundary` (default on); 0 mid-word boundaries across the full corpus post-fix, verified below the boundary example above. Getting the fix itself right took two more iterations (a mid-word *start* bug, then a real infinite-loop bug) — both caught by testing against the actual corpus rather than short synthetic strings, and both documented in the fix note above.
+- **Recursive** — heading isolation. **Fixed** via `_merge_bare_headings` post-merge (Step 7), with one known unfixed variant remaining (`---`-prefixed headings in one document).
+- **Semantic** — numbered-list items misread as standalone sentences. **Not yet fixed** — the one remaining open failure, and arguably the most damaging of the three because the resulting chunk (`"3."`) carries no retrievable signal at all, unlike a mis-split word or an isolated-but-legible heading.
 
 Each strategy's failure mode traces back to a different layer treating structure it didn't understand as if it were the structure it expects: fixed ignores structure entirely, recursive's separator hierarchy doesn't know a heading is bound to its body, and semantic's sentence splitter doesn't know a numbered list marker isn't a sentence. Structural fixes compound — every fix applied so far has been a targeted post-process for the specific pattern found, not a general parser, which means new document shapes in the corpus should be expected to surface new unhandled patterns rather than assuming these fixes generalize.

@@ -114,8 +114,17 @@ class Chunker:
         chunk_size: int = 500,
         overlap: int = 100,
         metadata: dict[str, Any] | None = None,
+        snap_to_word_boundary: bool = True,
     ) -> list[Chunk]:
-        """Split text into chunk_size-character chunks overlapping by overlap characters."""
+        """Split text into ~chunk_size-character chunks overlapping by ~overlap characters.
+
+        snap_to_word_boundary (default True) nudges each cut point backward to the
+        nearest whitespace within a small lookback window, so a chunk never starts or
+        ends mid-word. This makes chunk length approximate rather than exact — a chunk
+        may land a little under chunk_size. Pass False to get the raw fixed-offset
+        behavior (useful for demonstrating what "no boundary awareness at all" looks
+        like, e.g. in reports/chunking_comparison.md).
+        """
         if chunk_size <= 0:
             raise ValueError(f"chunk_size must be positive, got {chunk_size}")
         if overlap < 0:
@@ -128,11 +137,22 @@ class Chunker:
 
         base = metadata or {}
         chunks: list[Chunk] = []
-        stride = chunk_size - overlap
         start = 0
 
         while start < len(text):
-            end = min(start + chunk_size, len(text))
+            raw_end = min(start + chunk_size, len(text))
+            end = (
+                self._snap_to_boundary(text, raw_end)
+                if snap_to_word_boundary and raw_end < len(text)
+                else raw_end
+            )
+            if end <= start:
+                # Snapping collapsed the window to nothing (e.g. chunk_size is close to
+                # a word length and the nearest whitespace behind raw_end sits at or
+                # before start) — fall back to the raw offset so the chunk is never
+                # empty and start always advances.
+                end = raw_end
+
             chunks.append(
                 Chunk(
                     text=text[start:end],
@@ -147,13 +167,58 @@ class Chunker:
             )
             if end == len(text):
                 break
-            start += stride
+            next_start = end - overlap
+            if snap_to_word_boundary:
+                # end was already snapped to a boundary, but next_start = end - overlap
+                # is an arithmetic offset from that boundary and can land back inside
+                # the word end was snapped away from (e.g. end snapped past "riverbank",
+                # next_start - overlap lands inside "riverbank" again). Snap it forward
+                # to the next boundary at-or-after next_start, not backward, so this
+                # chunk doesn't reopen the same word the previous one just closed.
+                next_start = self._snap_to_boundary(text, next_start, lookback=40, forward=True)
+            # Snapping can still leave next_start <= start on a short/dense chunk;
+            # force forward progress rather than looping forever.
+            start = next_start if next_start > start else end
 
         logger.info(
-            "Chunked %d chars into %d fixed chunks (size=%d, overlap=%d)",
-            len(text), len(chunks), chunk_size, overlap,
+            "Chunked %d chars into %d fixed chunks (size=%d, overlap=%d, snapped=%s)",
+            len(text), len(chunks), chunk_size, overlap, snap_to_word_boundary,
         )
         return chunks
+
+    @staticmethod
+    def _snap_to_boundary(
+        text: str, pos: int, lookback: int = 40, forward: bool = False
+    ) -> int:
+        """Move pos to the nearest whitespace within `lookback` chars.
+
+        Searches backward by default (used for a chunk's end, so the chunk doesn't
+        run into the next word). With forward=True searches forward instead (used for
+        a chunk's start, so it doesn't reopen a word the previous chunk's end just
+        snapped past). Falls back to the raw position if no whitespace is found in
+        range (e.g. one word longer than the lookback window) — better to allow a
+        rare mid-word split than to silently produce oversized chunks or get stuck.
+        """
+        if forward:
+            window_end = min(len(text), pos + lookback)
+            window = text[pos:window_end]
+            first_space = next((i for i, ch in enumerate(window) if ch.isspace()), None)
+            if first_space is None:
+                return pos
+            return pos + first_space + 1  # cut after the whitespace, not on it
+
+        window_start = max(0, pos - lookback)
+        window = text[window_start:pos]
+        last_space = window.rfind(" ")
+        if last_space == -1:
+            # try any whitespace, not just plain space (newlines, tabs)
+            for i in range(len(window) - 1, -1, -1):
+                if window[i].isspace():
+                    last_space = i
+                    break
+        if last_space == -1:
+            return pos
+        return window_start + last_space + 1  # cut after the whitespace, not on it
 
     def chunk_recursive(
         self,
